@@ -1,0 +1,12 @@
+
+/* CSS Document */
+
+#demo_table1,#demo_table2,#demo_table3,#demo_table4,#demo_table5,#demo_table6,#demo_table7,#demo_table8{z-index: 9999996;position: absolute; top:50%; left:50%; width: 570px;color: #000;overflow: visible;margin:0 auto;text-align: center;display: none;}
+.tree_table1{z-index: 9999996;overflow:scroll;margin:0 auto;text-align: left; table-layout:auto;white-space:nowrap;width:300px;height:100%;zoom:1;}
+
+.demo_close_btn{display: block;position: absolute;cursor: pointer;right: 3px;top: 3px;z-index: 10002;}
+.box_title{ background:url(../images/box_bgTop.gif) no-repeat; height:39px; line-height:39px; width:558px; text-align:left; padding-left:12px;}
+.box_content{ background-color:#fff; width:570px; padding:12px 0;}
+.hr_style{width:98%;height:1px; border-bottom:solid #E3E3E3 1px; margin:12px auto;}
+#greybackground{background:#333333;position:fixed;z-index:9999995;width:100%;height:100%;top:0;left:0;color:#000;-moz-opacity:0.5;}
+* html #greybackground {position:absolute;}

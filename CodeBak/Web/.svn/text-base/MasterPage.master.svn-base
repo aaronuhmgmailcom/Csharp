@@ -1,0 +1,256 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="eChartProject.Web.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="padding: 0px;">
+    <form runat="server" id="form1">
+    <div id="mainbody" name="mainbody" width="100%" frameborder="0">
+        <div style="clear: both; font-size: 0; height: 37px; line-height: 0; margin: 0; padding: 0;
+            width: 100%;">
+        </div>
+        <div id="header">
+            <div class="left" style="width: 350px; margin: 16px 0 0 0;">
+                <span style="margin-right: 12px;">
+                    <h3 class="text18b">
+                        Professional</h3>
+                </span>
+                <br class="clear" />
+                <br class="clear" />
+            </div>
+            <div class="right" style="width: 350px; margin: 16px 0 0 0;">
+                <span>
+                    <asp:LinkButton runat="server" ID="lbtnLogout" Font-Underline="true" Text="<%$Resources:Global,Common_Button_Logout%>"
+                        OnClick="lbtnLogout_Click"></asp:LinkButton></span> <span style="margin-right: 12px;">
+                            |</span> <span style="margin-right: 12px;"><b>
+                                <asp:Label runat="server" ID="lblName"></asp:Label></b> </span>
+                <br class="clear" />
+            </div>
+        </div>
+        <div id="nav">
+            <ul>
+                <li style="background-image: none; width: 16px;"></li>
+                <li id="liContent" runat="server"><a href="/Page/Content.aspx" target="_top">Content</a></li>
+                <li id="liMonitorAndOp" runat="server"><a href="/Page/Welcome.aspx" target="_top">Monitor</a></li>
+                <li id="liSetting" runat="server"><a href="/Page/Setting.aspx" target="_top">Setting</a></li>
+            </ul>
+        </div>
+        <div id="main_content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+            2011 www.esuperfund.com.au
+        </div>
+    </div>
+    <div class="mainbody_end">
+    </div>
+    <div id="copyright">
+        2011 www.esuperfund.com.au</div>
+    <input runat="server" id="email" type="text" style="display: none" />
+    <input runat="server" id="pswd" type="text" style="display: none" />
+    </form>
+    <!-- float IDV start add folder -->
+    <form action="#">
+    <div id="demo_table1">
+        <div class="text14b box_title" id="AddOrEditDialogTitle">
+            Add Folder</div>
+        <a href="#" class="demo_close_btn" id="btnCloseAddOrEditWindow"><span style="margin: 10px 10px 0 0;"
+            class="right">
+            <img src="../App_Themes/DefaultTheme/images/btn_close.gif" /></span></a>
+        <div class="box_content">
+            <div class="center border_line" style="width: 541px; height: 205px; overflow: hidden;
+                vertical-align: middle">
+                <table class="sheet1 center" style="width: 100%; height: 100%" border="0" align="center"
+                    cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="24" align="right">
+                            Folder Name:
+                        </td>
+                        <td>
+                            <span class="search2_bg left">
+                                <input id="addfoldername" class="search2 left" name="input" type="text" maxlength="50" /></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hr_style">
+            </div>
+            <div>
+                <input class="btn_cancel right" name="" type="button" id="btnCloseAddOrEditWindow1" /><input
+                    class="btn_ok right" id="btnAddOrEdit" name="" type="button" /></div>
+            <div class="clear">
+            </div>
+        </div>
+        <div style="width: 570px;">
+            <img src="../App_Themes/DefaultTheme/images/box_bgbottom.gif" />
+        </div>
+    </div>
+    </form>
+    <!--add folder  float IDV end-->
+    <!--  float IDV start add Msg -->
+    <form action="#">
+    <div id="demo_table4">
+        <div class="text14b box_title" id="AddOrEditMsgDialogTitle">
+            Add Message</div>
+        <a href="#" class="demo_close_btn" id="btnCloseAddOrEditMsgWindow"><span style="margin: 10px 10px 0 0;"
+            class="right">
+            <img src="../App_Themes/DefaultTheme/images/btn_close.gif" /></span></a>
+        <div class="box_content">
+            <div class="center border_line" style="width: 541px; height: 205px; overflow: hidden;">
+                <table class="sheet1 center" style="width: 100%; height: 100%" border="0" align="center"
+                    cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="24" align="right">
+                            Message Content:
+                        </td>
+                        <td>
+                            <span class="search2_bg left">
+                                <input id="msgcontent" class="search2 left" name="input" type="text" maxlength="500" /></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hr_style">
+            </div>
+            <div>
+                <input class="btn_cancel right" name="" type="button" id="BtnCancle" /><input class="btn_ok right"
+                    id="BtnOKmsg" name="" type="button" /></div>
+            <div class="clear">
+            </div>
+        </div>
+        <div style="width: 570px;">
+            <img src="../App_Themes/DefaultTheme/images/box_bgbottom.gif" />
+        </div>
+    </div>
+    </form>
+    <!--add  Msg  float IDV END-->
+    <!--  float IDV start add Variations -->
+    <form action="#">
+    <div id="demo_table5">
+        <div class="text14b box_title" id="addOrEditVarDiaTitle">
+            Add Variation</div>
+        <a href="#" class="demo_close_btn" id="btnCloseAddOrEditVarWindow"><span style="margin: 10px 10px 0 0;"
+            class="right">
+            <img src="../App_Themes/DefaultTheme/images/btn_close.gif" /></span></a>
+        <div class="box_content">
+            <div class="center border_line" style="width: 541px; height: 205px; overflow: hidden;">
+                <table class="sheet1 center" style="width: 100%; height: 100%" border="0" align="center"
+                    cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="24" align="right">
+                            Variation Content:
+                        </td>
+                        <td>
+                            <span class="search2_bg left">
+                                <input id="VarContent" class="search2 left" name="input" type="text" maxlength="500" /></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hr_style">
+            </div>
+            <div>
+                <input class="btn_cancel right" name="" type="button" id="btnC" /><input class="btn_ok right"
+                    id="BtnOkVar" name="" type="button" /></div>
+            <div class="clear">
+            </div>
+        </div>
+        <div style="width: 570px;">
+            <img src="../App_Themes/DefaultTheme/images/box_bgbottom.gif" />
+        </div>
+    </div>
+    </form>
+    <!--add  Variations  float IDV END-->
+    <!--  float IDV start add DB SCHEME -->
+    <form action="#">
+    <div id="demo_table6">
+        <div class="text14b box_title" id="AddDBScheme">
+            Add DBScheme</div>
+        <a href="#" class="demo_close_btn" id="btnCloseAddDBSCH"><span style="margin: 10px 10px 0 0;"
+            class="right">
+            <img src="../App_Themes/DefaultTheme/images/btn_close.gif" /></span></a>
+        <div class="box_content">
+            <div class="center border_line" style="width: 541px; height: 405px; overflow: hidden;">
+                <table class="sheet1 left" style="width: 100%; height: 100%" border="0" align="center"
+                    cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="24" align="left" style="background-color: #F7F7F7; border: 1px solid #D7D7D7;
+                            overflow: auto; padding: 0.25em;">
+                            Please Select one table:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="108px;">
+                            <span id="tableSpan">
+                                <dl class="filetree" id="dltable" style="position: relative; height: 108px; background-color: #F7F7F7;
+                                    border: 1px solid #D7D7D7; overflow: auto; padding: 0.25em;">
+                                    <dd title="fund" fid="fundD" fullname="fund" style="text-align: left;">
+                                        <span style="height: 24px; margin-bottom: 20px;">
+                                            <img src="../App_Themes/DefaultTheme/images/table.png" align="absmiddle" style="margin-right: 8px;" /></span><span
+                                                id="fund" style="text-decoration: underline;" onclick="fundsClick(this);">fund</span>
+                                    </dd>
+                                    <dd title="fundbankaccount" fid="fundbankaccountD" fullname="fundbankaccount" style="text-align: left;">
+                                        <span style="height: 24px; margin-bottom: 20px;">
+                                            <img src="../App_Themes/DefaultTheme/images/table.png" align="absmiddle" style="margin-right: 8px;" /></span><span
+                                                id="fundbankaccount" style="text-decoration: underline;" onclick="fundbankaccountSClick(this);">fundbankaccount</span>
+                                    </dd>
+                                    <dd title="fundtrustee" fid="fundtrusteeD" fullname="fundtrustee" style="text-align: left;">
+                                        <span style="height: 24px; margin-bottom: 20px;">
+                                            <img src="../App_Themes/DefaultTheme/images/table.png" align="absmiddle" style="margin-right: 8px;" /></span><span
+                                                id="fundtrustee" style="text-decoration: underline;" onclick="fundtrusteeSClick(this);">fundtrustee</span>
+                                    </dd>
+                                    <dd title="fundbankaccounttransaction" fid="fundbankaccounttransactionD" fullname="fundbankaccounttransaction"
+                                        style="text-align: left;">
+                                        <span style="height: 24px; margin-bottom: 20px;">
+                                            <img src="../App_Themes/DefaultTheme/images/table.png" align="absmiddle" style="margin-right: 8px;" /></span><span
+                                                id="fundbankaccounttransaction" style="text-decoration: underline;" onclick="fundbankaccounttraSClick(this);">fundbankaccounttransaction</span>
+                                    </dd>
+                                    <dd title="bankaccounttype" fid="bankaccounttypeD" fullname="bankaccounttype" style="text-align: left;">
+                                        <span style="height: 24px; margin-bottom: 20px;">
+                                            <img src="../App_Themes/DefaultTheme/images/table.png" align="absmiddle" style="margin-right: 8px;" /></span><span
+                                                id="bankaccounttype" style="text-decoration: underline;" onclick="bankaccounttypeSClick(this);">bankaccounttype</span>
+                                    </dd>
+                                </dl>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="24" align="left" style="background-color: #F7F7F7; border: 1px solid #D7D7D7;
+                            overflow: auto; padding: 0.25em;">
+                            Please Select one field:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="198px;">
+                            <span id="fieldSpan">
+                                <dl class="filetree" id="dlfield" style="position: relative; height: 198px; background-color: #F7F7F7;
+                                    border: 1px solid #D7D7D7; overflow: auto; padding: 0.25em;">
+                                </dl>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hr_style">
+            </div>
+            <div>
+                <input class="btn_cancel right" name="" type="button" id="btnDBSCHCancel" /><input
+                    class="btn_ok right" id="btnDBSCHOK" name="" type="button" /></div>
+            <div class="clear">
+            </div>
+        </div>
+        <div style="width: 570px;">
+            <img src="../App_Themes/DefaultTheme/images/box_bgbottom.gif" />
+        </div>
+    </div>
+    </form>
+    <!--add  DB SCHEME  float IDV END-->
+    <p>
+    </p>
+</body>
+</html>

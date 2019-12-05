@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="eChartProject.Web.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="form1">
+          
+    <div id="mainbody" name="mainbody" width="100%" frameborder="0">
+          <div style="clear:both; font-size:0; height:37px; line-height:0; margin:0; padding:0; width:100%;" >
+        </div>
+        <div id="header">
+            <div class="left" style="width: 350px; margin: 16px 0 0 0;">
+                  <span style="margin-right: 12px; ">
+                    <h3 class="text18b">Professional</h3>
+                </span><br class="clear" />
+                <br class="clear" />
+               
+            </div>
+
+            <div class="right" style="width: 350px; margin: 16px 0 0 0;">
+            
+            
+                <span >
+                    <asp:LinkButton runat="server" ID="lbtnLogout"    Font-Underline=true
+                    Text="<%$Resources:Global,Common_Button_Logout%>" onclick="lbtnLogout_Click"></asp:LinkButton></span>
+                    <span style="margin-right: 12px;">
+                    |</span>
+                    
+                <span style="margin-right: 12px;">
+                    <b><asp:Label runat="server" ID="lblName" ></asp:Label></b>
+                </span><br class="clear" />
+               
+            </div>
+        </div>
+        <div id="nav">
+            <ul>
+                <li style="background-image: none; width: 16px;"></li>
+                <li id="liContent"  runat="server"><a href="/Page/Content.aspx" target="_top">Content</a></li>
+                <li id="liMonitorAndOp" runat="server"><a href="/Page/Welcome.aspx" target="_top">Monitor</a></li>
+                <li id="liSetting" runat="server"><a href="/Page/Setting.aspx" target="_top">Setting</a></li>
+            </ul>
+        </div>
+        <div id="main_content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">2011 www.esuperfund.com.au
+        </div>
+    </div>
+    <div class="mainbody_end">
+    </div>
+    <div id="copyright">
+        2011 www.esuperfund.com.au</div>
+    <input runat="server" id="email" type="text" style="display: none" />
+    <input runat="server" id="pswd" type="text" style="display: none" />
+    
+   
+    </form>
+    <p>
+        </p>
+</body>
+</html>

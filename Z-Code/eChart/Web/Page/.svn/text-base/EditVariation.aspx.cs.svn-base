@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using eChartProject.Web.Common;
+using System.Data;
+using eChartProject.eChartManagement.Enum;
+
+namespace eChartProject.Web.Page
+{
+    public partial class EditVariation : BasePage
+    {
+        public static eChartProject.BLL.eChart.server_contents_message bll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_message(); }
+        }
+        public static eChartProject.BLL.eChart.server_contents_folders Fbll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_folders(); }
+        }
+        public static eChartProject.BLL.eChart.server_contents_answers abll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_answers(); }
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                try
+                {
+                    string varContent = Request.Form["varContent"];
+                    string selectid = Request.Form["selectid"];
+                    string varid = Request.Form["varid"];
+                    string control = Request.Form["control"];
+
+                    if (varid.Contains(Nodetype.variationedit.ToString()))
+                    {
+                        varid = varid.Remove(0, Nodetype.variationedit.ToString().Length);
+
+                        eChartProject.Model.eChart.server_contents_message model = new eChartProject.Model.eChart.server_contents_message();
+                        model.Question = varContent.Trim();
+                        model.ID = int.Parse(varid);
+
+                        bll.UpdateByQuestion(model);
+
+                        Response.Write("success");
+                        Response.End();
+                    }
+                    else if (control == "delete")
+                    {
+                        varid = varid.Remove(0, Nodetype.variationdelete.ToString().Length);
+
+                        eChartProject.Model.eChart.server_contents_message model = new eChartProject.Model.eChart.server_contents_message();
+                        model.ID = int.Parse(varid);
+
+                        bll.Delete(model.ID);
+
+                        Response.Write("success");
+                        Response.End();
+                    }
+                 
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+
+    }
+}

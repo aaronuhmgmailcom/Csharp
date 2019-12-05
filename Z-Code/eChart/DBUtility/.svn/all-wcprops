@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility
+END
+DbHelperMySQL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperMySQL.cs
+END
+BaseSqlMapDao.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/BaseSqlMapDao.cs
+END
+DESEncrypt.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DESEncrypt.cs
+END
+DBUtility.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DBUtility.csproj.user
+END
+DbHelperSQLP.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperSQLP.cs
+END
+DbHelperOra.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperOra.cs
+END
+DbHelperSQL2.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperSQL2.cs
+END
+CommandInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/CommandInfo.cs
+END
+DbHelperOleDb.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperOleDb.cs
+END
+SQLHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/SQLHelper.cs
+END
+PubConstant.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/PubConstant.cs
+END
+DBUtility.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ESuperFund-wh1/!svn/ver/475/eChart/Z-Code/eChart/DBUtility/DBUtility.csproj
+END
+DbHelperSQL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperSQL.cs
+END
+OracleHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/OracleHelper.cs
+END
+DbHelperSQLite.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/DbHelperSQLite.cs
+END
+eChart.suo
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ESuperFund-wh1/!svn/ver/405/eChart/Z-Code/eChart/DBUtility/eChart.suo
+END

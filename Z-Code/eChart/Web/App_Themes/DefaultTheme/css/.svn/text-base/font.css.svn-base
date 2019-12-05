@@ -1,0 +1,60 @@
+
+body {font-size: 12px; font-family: Verdana, Arial, sans-serif,"宋体" ; color: #5B5B5B;}
+.btn1, .btn2, .btn1_hover,.btn2_hover{ color:#fff; text-align:left; font:400 11px/1.5em Verdana, Geneva, sans-serif, sans-serif, "宋体";}
+.input_sylte1{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:14px; font-weight:bold;}
+.text10{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:10px; color:#666; line-height:10px;}
+.text14b{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:14px; font-weight:bold; color:#6b6a6a;}
+.text14b_blue{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:14px; font-weight:bold; color:#21a9fd;}
+/*.text16b{font-size:14px;}*/
+.text12_gray{color:#A0A0A0; font:400 10px/1em Verdana, Geneva, sans-serif, sans-serif, "宋体" }
+.text18b{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:18px; font-weight:bold; color:#21a9fd;}
+.current_page{ font-size:12px; font-weight:bold; color:#21a9fd;}
+a.greyTxt:link{ color:#ccc;}
+a.greyTxt:visited{ color:#ccc;}
+a.greyTxt:hover{ color:#000;}
+#main .title{ font-size:14px; font-weight:bold; color:#fff;}
+#mainbody #nav ul li.current{ color:#fff;}
+#mainbody #nav ul li.current a{ color:#fff;}
+#mainbody #nav ul{ font-weight:bold; color:#999;}
+dl.list1 span.title{font-family:Verdana, Geneva, sans-serif, sans-serif, "宋体"; font-size:14px; font-weight:bold; color:#fff;}
+dl.list1 span.more{ color:#21a9fd;}
+ul.list2 li{ font-size:10px; color:#666;}
+ul.list2 li p, dl.sheet3 div dd b{ font-size:14px; color:#21a9fd; font-weight:bold;}
+ul.list2 li p span, dl.sheet3 div dt, dl.sheet3 div dd span{ font-size:10px; font-weight:normal; color:#666;}
+#current_place span.txt{ color:#21a9fd;}
+#current_place a:link,#current_place a:visited{ color:#21a9fd;}
+#current_place a:hover{ color:#000;}
+table.sheet1 th{ font-size:12px; font-weight:bold; color:#6b6a6a;}
+table.sheet1 th.first, dl.sheet2 dt.big{ font-size:14px; font-weight:bold;}
+table.sheet1, dl.sheet2{ color:#6b6a6a;}
+.attention{ color:red;}
+.attentionForTable{ color:red; height:33px; line-height:33px; vertical-align:middle;}
+
+#nav a:link,#nav a:visited{ color:#999; text-decoration:none; display:block; width:115px; height:32px;}
+#nav a:hover{ color:#fff; text-decoration:none; background:url(../images/nav_tab1.gif); display:block; width:115px; height:32px;}
+a:link, a:visited{color: #5B5B5B; text-decoration:none;}
+a:hover{color: #000; text-decoration:underline;}
+.btn1 a:link,.btn2 a:link,.btn_join a:link,.btn_onlineHelp a:link,.btn5 a:link,.btn6 a:link,.btn_newpw a:link,.btn_cancel a:link,.btn_send a:link,.btn_acccpt a:link,.btn_change a:link,.btn_send1 a:link, .btn1 a:visited,.btn2 a:visited,.btn_join a:visited,.btn_onlineHelp a:visited,.btn5 a:visited,.btn6 a:visited,.btn_newpw a:visited,.btn_cancel a:visited,.btn_send a:visited,.btn_acccpt a:visited,.btn_change a:visited,.btn_send1 a:visited{ color:#21a9fd;}
+.btn1 a:hover,.btn2 a:hover,.btn_join a:hover,.btn_onlineHelp a:hover,.btn5 a:hover,.btn6 a:hover,.btn_newpw a:hover,.btn_cancel a:hover,.btn_send a:hover,.btn_acccpt a:hover,.btn_change a:hover,.btn_send1 a:hover{ color:#4E639C;}
+
+a.blue_underline:link,a.blue_underline:visited{ color:#30affd; text-decoration:underline;}
+a.blue_underline:hover{ color:#40638E; text-decoration:underline;}
+
+a.blue:link,a.blue:visited{ color:#30affd; text-decoration:none;}
+a.blue:hover{ color:#40638E; text-decoration:underline;}
+
+.page1 ul li.current_page{ font-size:12px; font-weight:bold; color:#21a9fd;  text-decoration:underline;}
+.page1 ul li a:link,.page1 ul li a:visited{ color:#5B5B5B; text-decoration:none;}
+.page1 ul li a:hover{ color:#000; text-decoration:underline;}
+
+.listMenu li a:link, .listMenu li a:visited{ display:block; width:100%; height:22px; text-decoration:none; color:#5B5B5B;}
+.listMenu li a:hover{ background-color:#5eaef7; display:block; width:100%; height:22px; font-weight:bold; text-decoration:none; color:#000;}
+
+dl.list1 dd a.link1:link, dl.list1 dd a.link1:visited{ color:#21a9fd; text-decoration:underline;}
+dl.list1 dd a.link1:hover{ color:#4E639C; text-decoration:underline;}
+
+ul.list4 li p{font:400 10px/1.5em Verdana, Geneva, sans-serif, sans-serif, "宋体";-webkit-text-size-adjust:none;}
+.share_search b{font:700 16px/2em Verdana, Geneva, sans-serif, sans-serif, "宋体"; color:#7f7f7f; font-weight:400;}
+.share_search b span{ color:#1a98e5;}
+
+#demo_table3 .box_content p,#demo_table5 .box_content p,#demo_table8 .box_content p{font:400 12px/2em Verdana, Geneva, sans-serif, sans-serif, "宋体"; color:#666;}

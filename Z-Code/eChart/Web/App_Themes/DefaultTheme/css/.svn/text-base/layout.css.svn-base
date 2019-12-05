@@ -1,0 +1,6 @@
+
+#mainbody{ background:url(../images/mainbody_bg1.png) repeat-y; width:950px; padding:0 10px; margin:0 auto;}
+#mainbody #header,#mainbody #nav,#mainbody #main_content{width:852px; margin:0 auto;}
+#main_content{ min-height:500px;}
+#copyright{ width:950px; height:26px; line-height:26px; margin:0 auto; text-align:center; color:#fff;}
+

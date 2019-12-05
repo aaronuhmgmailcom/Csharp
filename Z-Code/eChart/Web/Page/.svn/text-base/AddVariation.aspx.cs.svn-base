@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using eChartProject.Web.Common;
+using System.Data;
+using eChartProject.eChartManagement.Enum;
+
+namespace eChartProject.Web.Page
+{
+    public partial class AddVariation : BasePage
+    {
+        public static eChartProject.BLL.eChart.server_contents_message bll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_message(); }
+        }
+        public static eChartProject.BLL.eChart.server_contents_folders Fbll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_folders(); }
+        }
+        public static eChartProject.BLL.eChart.server_contents_answers abll
+        {
+            get { return new eChartProject.BLL.eChart.server_contents_answers(); }
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                try
+                {
+                    string varContent = Request.Form["varContent"];
+                    string selectid = Request.Form["selectid"];
+
+
+                    if (selectid.Contains(Nodetype.message.ToString()))
+                    {
+                        selectid = selectid.Remove(0, Nodetype.message.ToString().Length);
+
+                        eChartProject.Model.eChart.server_contents_message model = new eChartProject.Model.eChart.server_contents_message();
+                        model.Question = varContent.Trim();
+                        //model.FolderID = int.Parse(selectid);
+                        model.isOffLine = 0;
+                        model.isPublic = 1;
+                        model.isVariations = 1;//设置成true
+                        model.RelatedID = int.Parse(selectid);
+                        //model.sortOrder = SortOrderHelper.GetSortOrder(model.FolderID);
+                        model.isDeleted = 1;
+                        bll.Add(model);
+                      
+                        Response.Write("success");
+                        Response.End();
+                    }
+                 
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+
+    }
+}

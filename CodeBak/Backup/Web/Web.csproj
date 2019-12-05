@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eChartProject.Web</RootNamespace>
+    <AssemblyName>eChartProject.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LtpPageControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\LtpPageControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\checkright.ascx" />
+    <Content Include="Controls\copyright.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Chatting.aspx.cs">
+      <DependentUpon>Chatting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chatting.aspx.designer.cs">
+      <DependentUpon>Chatting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientLogin.aspx.cs">
+      <DependentUpon>ClientLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientLogin.aspx.designer.cs">
+      <DependentUpon>ClientLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Classes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Classes\ClientUserInfo.cs" />
+    <Compile Include="Common\Classes\Encrypt.cs" />
+    <Compile Include="Common\Classes\FieldROW.cs" />
+    <Compile Include="Common\Classes\FieldsRowHelper.cs" />
+    <Compile Include="Common\Classes\IconHelper.cs" />
+    <Compile Include="Common\Classes\Icons.cs" />
+    <Compile Include="Common\Classes\Row.cs" />
+    <Compile Include="Common\Classes\RowHelper.cs" />
+    <Compile Include="Common\Classes\SessionInfo.cs" />
+    <Compile Include="Common\Classes\SortOrderHelper.cs" />
+    <Compile Include="Common\Classes\TableXmlRowHelper.cs" />
+    <Compile Include="Common\Classes\UserInfo.cs" />
+    <Compile Include="Common\Classes\Utils.cs" />
+    <Compile Include="Common\Classes\VariarionsROW.cs" />
+    <Compile Include="Common\Classes\VariationsRowHelper.cs" />
+    <Compile Include="Common\Classes\XmlSerialization.cs" />
+    <Compile Include="Controls\CheckRight.ascx.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckRight.ascx.designer.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.designer.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetLearnMore.aspx.cs">
+      <DependentUpon>GetLearnMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetLearnMore.aspx.designer.cs">
+      <DependentUpon>GetLearnMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Global.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AddFolderMessage.aspx.cs">
+      <DependentUpon>AddFolderMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\AddFolderMessage.aspx.designer.cs">
+      <DependentUpon>AddFolderMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AddRule.aspx.cs">
+      <DependentUpon>AddRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\AddRule.aspx.designer.cs">
+      <DependentUpon>AddRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AddVariation.aspx.cs">
+      <DependentUpon>AddVariation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\AddVariation.aspx.designer.cs">
+      <DependentUpon>AddVariation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Content.aspx.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Content.aspx.designer.cs">
+      <DependentUpon>Content.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DeleteFolderMessage.aspx.cs">
+      <DependentUpon>DeleteFolderMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DeleteFolderMessage.aspx.designer.cs">
+      <DependentUpon>DeleteFolderMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DeleteRule.aspx.cs">
+      <DependentUpon>DeleteRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DeleteRule.aspx.designer.cs">
+      <DependentUpon>DeleteRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\EditRule.aspx.cs">
+      <DependentUpon>EditRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\EditRule.aspx.designer.cs">
+      <DependentUpon>EditRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\EditVariation.aspx.cs">
+      <DependentUpon>EditVariation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\EditVariation.aspx.designer.cs">
+      <DependentUpon>EditVariation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GetAnswerContent.aspx.cs">
+      <DependentUpon>GetAnswerContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GetAnswerContent.aspx.designer.cs">
+      <DependentUpon>GetAnswerContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GetDBTableFieldName.aspx.cs">
+      <DependentUpon>GetDBTableFieldName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GetDBTableFieldName.aspx.designer.cs">
+      <DependentUpon>GetDBTableFieldName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GetFields.aspx.cs">
+      <DependentUpon>GetFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GetFields.aspx.designer.cs">
+      <DependentUpon>GetFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GetFileList.aspx.cs">
+      <DependentUpon>GetFileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GetFileList.aspx.designer.cs">
+      <DependentUpon>GetFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\GetVariations.aspx.cs">
+      <DependentUpon>GetVariations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\GetVariations.aspx.designer.cs">
+      <DependentUpon>GetVariations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MoveMsgUpDown.aspx.cs">
+      <DependentUpon>MoveMsgUpDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\MoveMsgUpDown.aspx.designer.cs">
+      <DependentUpon>MoveMsgUpDown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\PasteFolderMsg.aspx.cs">
+      <DependentUpon>PasteFolderMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\PasteFolderMsg.aspx.designer.cs">
+      <DependentUpon>PasteFolderMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SaveFolderMsgAnswer.aspx.cs">
+      <DependentUpon>SaveFolderMsgAnswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SaveFolderMsgAnswer.aspx.designer.cs">
+      <DependentUpon>SaveFolderMsgAnswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SetFolderMsgonoff.aspx.cs">
+      <DependentUpon>SetFolderMsgonoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SetFolderMsgonoff.aspx.designer.cs">
+      <DependentUpon>SetFolderMsgonoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Warning.aspx.cs">
+      <DependentUpon>Warning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Warning.aspx.designer.cs">
+      <DependentUpon>Warning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Page\SaveSetting.aspx.cs">
+      <DependentUpon>SaveSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SaveSetting.aspx.designer.cs">
+      <DependentUpon>SaveSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.designer.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewChat.aspx.cs">
+      <DependentUpon>ViewChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewChat.aspx.designer.cs">
+      <DependentUpon>ViewChat.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Message.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\Global.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eChartManagement\eChartManagement.csproj">
+      <Project>{062F1D74-4E9C-4169-A363-7245C1DA7202}</Project>
+      <Name>eChartManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DefaultTheme\css\demo.css" />
+    <Content Include="App_Themes\DefaultTheme\css\font.css" />
+    <Content Include="App_Themes\DefaultTheme\css\layout.css" />
+    <Content Include="App_Themes\DefaultTheme\css\public.css" />
+    <Content Include="App_Themes\DefaultTheme\css\reset.css" />
+    <Content Include="App_Themes\DefaultTheme\css\sample.css" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\DefaultTheme\css\ui-lightness\jquery-ui-1.8.11.custom.css" />
+    <Content Include="App_Themes\DefaultTheme\images\blank.png" />
+    <Content Include="App_Themes\DefaultTheme\images\body_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\box_bg1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\box_bg2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\box_bg3.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\box_bgbottom.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\box_bgTop.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_01.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_01_hover.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_02.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_02_hover.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_next.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_next.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_next1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_next_click.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_pre.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_pre.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_pre1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_arrow_pre_click.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_bg1a.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_bg1b.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_bg2a.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_bg2b.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_cancel.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_close.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_close1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_close2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_down.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_login.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_ok.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_ok1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_pause.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_pause_click.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_play.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_play.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_play_click.png" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_search_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_send1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_up.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\btn_up_click.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\cnicon_KDE_Crystal.png" />
+    <Content Include="App_Themes\DefaultTheme\images\comment_private.png" />
+    <Content Include="App_Themes\DefaultTheme\images\database_add.png" />
+    <Content Include="App_Themes\DefaultTheme\images\doc.png" />
+    <Content Include="App_Themes\DefaultTheme\images\doc_gray.png" />
+    <Content Include="App_Themes\DefaultTheme\images\Esuperfund.jpg" />
+    <Content Include="App_Themes\DefaultTheme\images\excel.png" />
+    <Content Include="App_Themes\DefaultTheme\images\file.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_05.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_06.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_07.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_08.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_09.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_10.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_11.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_12.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_14.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_15.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_16.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_17.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_18.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_19.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_20.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_21.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_22.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_24.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_25.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_26.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_28.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_29.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_30.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_31.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_32.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_33.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_34.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_35.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_36.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_37.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_38.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_39.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Add.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Change-file-version.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Change-file-version2.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Change-password.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Copy-to.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_copyPic.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Create-a-folder.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Created-the-account.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_currentplace.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Delete-a-file.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Delete-a-folder.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Delete-a-folder2.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_down1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Download.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Enlarge.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Explore.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Explore_gray.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_file_gray.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_fullscreen.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Link-device.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_listmenu.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Magnifier.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Move-to.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Save.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Show-delete-files.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Show-version.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_slideshow.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_sort_down1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_sort_down2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_sort_up1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_sort_up2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Unlink-device.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_unSelected.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_unshare.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_up1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Update-a-file.png" />
+    <Content Include="App_Themes\DefaultTheme\images\icon_Upload-a-file.png" />
+    <Content Include="App_Themes\DefaultTheme\images\input_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\input_bg1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\jpg.png" />
+    <Content Include="App_Themes\DefaultTheme\images\jpg_gray.png" />
+    <Content Include="App_Themes\DefaultTheme\images\loading.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\login.png" />
+    <Content Include="App_Themes\DefaultTheme\images\mainbody_bg1.png" />
+    <Content Include="App_Themes\DefaultTheme\images\mainbody_bg2.png" />
+    <Content Include="App_Themes\DefaultTheme\images\msgoffline.png" />
+    <Content Include="App_Themes\DefaultTheme\images\msgonline.png" />
+    <Content Include="App_Themes\DefaultTheme\images\nav_tab1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\nav_tab2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\nav_tab_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pagination_loading.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\paste.png" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_bg1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_people.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_people_s.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_shodow1.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\pic_shodow2.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\png.png" />
+    <Content Include="App_Themes\DefaultTheme\images\png_gray.png" />
+    <Content Include="App_Themes\DefaultTheme\images\popup0415.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\rounded_rb.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\rounded_rt.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\search_bg.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\table.png" />
+    <Content Include="App_Themes\DefaultTheme\images\table_column_alt.png" />
+    <Content Include="App_Themes\DefaultTheme\images\tech_support.png" />
+    <Content Include="App_Themes\DefaultTheme\images\textArea.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\title.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\title_b.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\tree_add.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\tree_sub.gif" />
+    <Content Include="App_Themes\DefaultTheme\images\unknown.png" />
+    <Content Include="App_Themes\DefaultTheme\images\unknown_gray.png" />
+    <Content Include="App_Themes\DefaultTheme\images\word_gray.png" />
+    <Content Include="Chatting.aspx" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\CHANGES.html" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\INSTALL.html" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\LICENSE.html" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="ClientLogin.aspx" />
+    <Content Include="Common\Scripts\correctpng.js" />
+    <Content Include="Common\Scripts\detailQueryDisplay.js" />
+    <Content Include="Common\Scripts\handlers.js" />
+    <Content Include="Common\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Common\Scripts\jquery-1.4.1.js" />
+    <Content Include="Common\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Common\Scripts\listMenu.js" />
+    <Content Include="Common\Scripts\menu.js" />
+    <Content Include="Common\Scripts\public.js" />
+    <Content Include="Common\Scripts\unitpngfix.js" />
+    <Content Include="Common\swfupload\swfupload.swf" />
+    <Content Include="Common\swfupload\swfuploadbutton.swf" />
+    <Content Include="Default.aspx" />
+    <Content Include="GetLearnMore.aspx" />
+    <Content Include="js\calendar1.js" />
+    <Content Include="js\CheckBox.js" />
+    <Content Include="js\Content.js" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Page\AddFolderMessage.aspx" />
+    <Content Include="Page\AddRule.aspx" />
+    <Content Include="Page\AddVariation.aspx" />
+    <Content Include="Page\bg.gif" />
+    <Content Include="Page\Content.aspx" />
+    <Content Include="Page\DeleteFolderMessage.aspx" />
+    <Content Include="Page\DeleteRule.aspx" />
+    <Content Include="Page\demo.js" />
+    <Content Include="images\file.gif" />
+    <Content Include="images\folder-closed.gif" />
+    <Content Include="images\folder.gif" />
+    <Content Include="images\minus.gif" />
+    <Content Include="images\plus.gif" />
+    <Content Include="images\treeview-black-line.gif" />
+    <Content Include="images\treeview-black.gif" />
+    <Content Include="images\treeview-default-line.gif" />
+    <Content Include="images\treeview-default.gif" />
+    <Content Include="images\treeview-famfamfam-line.gif" />
+    <Content Include="images\treeview-famfamfam.gif" />
+    <Content Include="images\treeview-gray-line.gif" />
+    <Content Include="images\treeview-gray.gif" />
+    <Content Include="images\treeview-red-line.gif" />
+    <Content Include="images\treeview-red.gif" />
+    <Content Include="jquery.treeview.css" />
+    <Content Include="jquery.treeview.js" />
+    <Content Include="lib\jquery.cookie.js" />
+    <Content Include="lib\jquery.js" />
+    <Content Include="Page\EditRule.aspx" />
+    <Content Include="Page\EditVariation.aspx" />
+    <Content Include="Page\GetAnswerContent.aspx" />
+    <Content Include="Page\GetDBTableFieldName.aspx" />
+    <Content Include="Page\GetFields.aspx" />
+    <Content Include="Page\GetFileList.aspx" />
+    <Content Include="Page\GetVariations.aspx" />
+    <Content Include="Page\Login.aspx" />
+    <Content Include="Page\MoveMsgUpDown.aspx" />
+    <Content Include="Page\PasteFolderMsg.aspx" />
+    <Content Include="Page\SaveFolderMsgAnswer.aspx" />
+    <Content Include="Page\screen.css" />
+    <Content Include="Page\SetFolderMsgonoff.aspx" />
+    <Content Include="Page\Setting.aspx" />
+    <Content Include="Page\Warning.aspx" />
+    <Content Include="Page\Welcome.aspx" />
+    <Content Include="Page\SaveSetting.aspx" />
+    <Content Include="ValidateCode.aspx" />
+    <Content Include="ViewChat.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\all-wcprops" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\entries" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\text-base\jquery-ui-1.8.11.custom.css.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\all-wcprops" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\entries" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_diagonals-thick_18_b81900_40x40.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_diagonals-thick_20_666666_40x40.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_flat_10_000000_40x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_glass_100_f6f6f6_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_glass_100_fdf5ce_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_glass_65_ffffff_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_gloss-wave_35_f6a828_500x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_highlight-soft_100_eeeeee_1x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-bg_highlight-soft_75_ffe45c_1x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-icons_222222_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-icons_228ef1_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-icons_ef8c08_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-icons_ffd27a_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\prop-base\ui-icons_ffffff_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_diagonals-thick_18_b81900_40x40.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_diagonals-thick_20_666666_40x40.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_flat_10_000000_40x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_glass_100_f6f6f6_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_glass_100_fdf5ce_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_glass_65_ffffff_1x400.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_gloss-wave_35_f6a828_500x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_highlight-soft_100_eeeeee_1x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-bg_highlight-soft_75_ffe45c_1x100.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-icons_222222_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-icons_228ef1_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-icons_ef8c08_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-icons_ffd27a_256x240.png.svn-base" />
+    <None Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\text-base\ui-icons_ffffff_256x240.png.svn-base" />
+    <None Include="ckeditor\.htaccess" />
+    <None Include="Common\.svn\all-wcprops" />
+    <None Include="Common\.svn\entries" />
+    <None Include="Common\Scripts\.svn\all-wcprops" />
+    <None Include="Common\Scripts\.svn\entries" />
+    <None Include="Common\Scripts\.svn\text-base\box_menu.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\changeImg.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\correctpng.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\detailQueryDisplay.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\handlers.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\jquery-1.3.min.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\jquery-1.5.2.min.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\jquery-ui-1.8.11.custom.min.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\listMenu.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\menu.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\public.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\swfu_handler.js.svn-base" />
+    <None Include="Common\Scripts\.svn\text-base\unitpngfix.js.svn-base" />
+    <None Include="Common\Services\.svn\all-wcprops" />
+    <None Include="Common\Services\.svn\entries" />
+    <None Include="Common\swfupload\.svn\all-wcprops" />
+    <None Include="Common\swfupload\.svn\entries" />
+    <None Include="Common\swfupload\.svn\prop-base\swfupload.swf.svn-base" />
+    <None Include="Common\swfupload\.svn\prop-base\swfuploadbutton.swf.svn-base" />
+    <None Include="Common\swfupload\.svn\text-base\swfupload.js.svn-base" />
+    <None Include="Common\swfupload\.svn\text-base\swfupload.swf.svn-base" />
+    <None Include="Common\swfupload\.svn\text-base\swfuploadbutton.swf.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\prop-base\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\props\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\tmp\props\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\.svn\tmp\text-base\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\props\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\tmp\props\" />
+    <Folder Include="App_Themes\DefaultTheme\css\ui-lightness\images\.svn\tmp\text-base\" />
+    <Folder Include="Common\.svn\prop-base\" />
+    <Folder Include="Common\.svn\props\" />
+    <Folder Include="Common\.svn\text-base\" />
+    <Folder Include="Common\.svn\tmp\prop-base\" />
+    <Folder Include="Common\.svn\tmp\props\" />
+    <Folder Include="Common\.svn\tmp\text-base\" />
+    <Folder Include="Common\Scripts\.svn\prop-base\" />
+    <Folder Include="Common\Scripts\.svn\props\" />
+    <Folder Include="Common\Scripts\.svn\tmp\prop-base\" />
+    <Folder Include="Common\Scripts\.svn\tmp\props\" />
+    <Folder Include="Common\Scripts\.svn\tmp\text-base\" />
+    <Folder Include="Common\Services\.svn\prop-base\" />
+    <Folder Include="Common\Services\.svn\props\" />
+    <Folder Include="Common\Services\.svn\text-base\" />
+    <Folder Include="Common\Services\.svn\tmp\prop-base\" />
+    <Folder Include="Common\Services\.svn\tmp\props\" />
+    <Folder Include="Common\Services\.svn\tmp\text-base\" />
+    <Folder Include="Common\swfupload\.svn\props\" />
+    <Folder Include="Common\swfupload\.svn\tmp\prop-base\" />
+    <Folder Include="Common\swfupload\.svn\tmp\props\" />
+    <Folder Include="Common\swfupload\.svn\tmp\text-base\" />
+    <Folder Include="Components\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5211</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

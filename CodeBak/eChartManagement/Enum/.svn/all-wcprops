@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum
+END
+EnumNodeType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumNodeType.cs
+END
+EnumServerStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumServerStatus.cs
+END
+EnumFundBankAccountTransaction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumFundBankAccountTransaction.cs
+END
+EnumFundBankAccountFields.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumFundBankAccountFields.cs
+END
+EnumfundtrusteeFields  .cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumfundtrusteeFields%20%20.cs
+END
+EnumControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumControl.cs
+END
+EnumBankAccountTypeFields.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumBankAccountTypeFields.cs
+END
+EnumUserStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumUserStatus.cs
+END
+EnumFundFields.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ESuperFund-wh1/!svn/ver/549/eChart/CodeBak/eChartManagement/Enum/EnumFundFields.cs
+END

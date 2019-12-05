@@ -1,0 +1,5 @@
+D:\Work\ESuperFund-wh1\eChart\CodeBak\WebClient\bin\WebClient.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\WebClient\bin\WebClient.pdb
+D:\Work\ESuperFund-wh1\eChart\CodeBak\WebClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\ESuperFund-wh1\eChart\CodeBak\WebClient\obj\Debug\WebClient.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\WebClient\obj\Debug\WebClient.pdb

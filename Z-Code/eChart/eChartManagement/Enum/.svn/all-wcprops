@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ESuperFund-wh1/!svn/ver/427/eChart/Z-Code/eChart/eChartManagement/Enum
+END
+EnumNodeType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ESuperFund-wh1/!svn/ver/518/eChart/Z-Code/eChart/eChartManagement/Enum/EnumNodeType.cs
+END
+EnumServerStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ESuperFund-wh1/!svn/ver/510/eChart/Z-Code/eChart/eChartManagement/Enum/EnumServerStatus.cs
+END
+EnumControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ESuperFund-wh1/!svn/ver/510/eChart/Z-Code/eChart/eChartManagement/Enum/EnumControl.cs
+END
+EnumUserStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ESuperFund-wh1/!svn/ver/510/eChart/Z-Code/eChart/eChartManagement/Enum/EnumUserStatus.cs
+END

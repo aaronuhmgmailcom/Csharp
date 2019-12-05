@@ -1,0 +1,17 @@
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\bin\Debug\eChartProject.DBUtility.dll
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\bin\Debug\eChartProject.DBUtility.pdb
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\bin\Debug\IBatisNet.Common.dll
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\bin\Debug\MySql.Data.dll
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\obj\Debug\eChartProject.DBUtility.dll
+D:\Work\ESuperFund-wh1\eChart\Z-Code\eChart\DBUtility\obj\Debug\eChartProject.DBUtility.pdb
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\eChartProject.DBUtility.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\eChartProject.DBUtility.pdb
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\IBatisNet.Common.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\MySql.Data.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\obj\Debug\eChartProject.DBUtility.dll
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\obj\Debug\eChartProject.DBUtility.pdb
+D:\Work\ESuperFund-wh1\eChart\CodeBak\DBUtility\bin\Debug\System.Data.SQLite.DLL
